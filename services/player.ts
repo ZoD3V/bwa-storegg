@@ -18,10 +18,10 @@ export async function getDetailVoucher(id: string) {
   const URL = `players/${id}/detail`;
 
   const response = await axios.get(
-    `https://web-production-1b5d.up.railway.app/api/v1/players/${id}`
+    `https://web-production-1b5d.up.railway.app/api/v1/players/${id}/detail`
   );
   const axiosResponse = response.data;
-  console.log(axiosResponse);
+  // console.log(axiosResponse);
 
   return axiosResponse.data;
 }
