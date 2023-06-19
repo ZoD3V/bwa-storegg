@@ -41,6 +41,7 @@ export default function EditProfile() {
     data.append("image", user.avatar);
     data.append("name", user.name);
     const response = await updateProfile(data, user.id);
+    console.log(user.id);
     if (response.error) {
       toast.error(response.message);
     } else {
