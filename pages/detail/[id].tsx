@@ -70,12 +70,13 @@ interface GetStaticProps {
 
 export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params;
-  const data = await getDetailVoucher(id);
+  const response = await getDetailVoucher(id);
+  // console.log(response);
   return {
     props: {
-      dataItem: data || null,
-      nominals: data?.nominals,
-      payments: data.nominals,
+      dataItem: response.data || null,
+      nominals: response.data?.nominals,
+      payments: response?.payment,
     },
   };
 }

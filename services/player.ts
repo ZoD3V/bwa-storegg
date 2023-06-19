@@ -23,7 +23,7 @@ export async function getDetailVoucher(id: string) {
   const axiosResponse = response.data;
   // console.log(axiosResponse);
 
-  return axiosResponse.data;
+  return axiosResponse;
 }
 
 export async function getGameCategory() {
